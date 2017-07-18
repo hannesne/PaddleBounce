@@ -506,7 +506,7 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: PaddleBounce
   metroPackageVersion: 
-  metroCertificatePath: C:\Dev\PaddleBounce\Assets\WSATestCertificate.pfx
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
   metroCertificateSubject: DefaultCompany
   metroCertificateIssuer: DefaultCompany

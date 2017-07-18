@@ -147,6 +147,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011154029958, guid: 2ed75ffdf9031c94e8bce4b3d17b9928,
+        type: 2}
+      propertyPath: drawVisualMeshes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011154029958, guid: 2ed75ffdf9031c94e8bce4b3d17b9928,
+        type: 2}
+      propertyPath: autoStartObserver
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ed75ffdf9031c94e8bce4b3d17b9928, type: 2}
   m_IsPrefabParent: 0
@@ -155,6 +165,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4000013298573622, guid: 2ed75ffdf9031c94e8bce4b3d17b9928,
     type: 2}
   m_PrefabInternal: {fileID: 368052650}
+--- !u!1 &390907009 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013046499688, guid: dc138879450c80f438141cbe47938daf,
+    type: 2}
+  m_PrefabInternal: {fileID: 827694468}
 --- !u!1 &417729112
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22489aa10d976ab4abe0aa631853c8e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Cursor: {fileID: 390907009}
 --- !u!1001 &827694468
 Prefab:
   m_ObjectHideFlags: 0
