@@ -6,7 +6,7 @@ PhysicMaterial:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: BladePhysic
-  dynamicFriction: 0.01
+  dynamicFriction: 0
   staticFriction: 0.4
   bounciness: 0.9
   frictionCombine: 0
