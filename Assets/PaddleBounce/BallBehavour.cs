@@ -20,15 +20,13 @@ public class BallBehavour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+      
     }
 
     // OnCollisionExit is called when this collider/rigidbody has stopped touching another rigidbody/collider
     private void OnCollisionEnter(Collision collision)
     {
         audioSource.Play();
-        
     }
-
 
 }
