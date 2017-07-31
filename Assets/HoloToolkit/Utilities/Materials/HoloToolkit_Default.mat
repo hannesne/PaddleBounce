@@ -7,8 +7,8 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: HoloToolkit_Default
-  m_Shader: {fileID: 4800000, guid: 0118fa4f1c88b4640b193eca2c181644, type: 3}
-  m_ShaderKeywords: _EMISSION _USECOLOR_ON
+  m_Shader: {fileID: 4800000, guid: 30a212a88e1063a428c85e50b1e427f2, type: 3}
+  m_ShaderKeywords: _EMISSION _USEMAINTEX_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_CustomRenderQueue: -1
@@ -42,7 +42,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 6e2409375dcefb240b7a1b540335f1c4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -78,12 +78,12 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _UseBumpMap: 0
-    - _UseColor: 1
+    - _UseColor: 0
     - _UseEmissionTex: 0
-    - _UseMainTex: 0
+    - _UseMainTex: 1
     - _ZTest: 4
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.97794116, g: 0.47458908, b: 0.47458908, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0.236, g: 0.236, b: 0.236, a: 1}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
