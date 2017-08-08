@@ -81,3 +81,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 ~$ReadMe.MD
+
+# Visual Studio
+.vs

@@ -5,18 +5,16 @@ public class PaddleBehaviour : MonoBehaviour, IInputHandler
 {
     public GameObject Cursor;
     public GameObject Ball;
+    public GameObject BallPrefab;
     public GameObject scoreboard;
-    private Vector3 originalPosition;
-    private Quaternion originalRotation;
     private ScoreboardBehaviour scoreboardBehaviour;
     private bool gameActive;
 
     // Use this for initialization
     void Start ()
     {
-        Transform ballTransform = Ball.transform;
-        originalPosition = ballTransform.position;
-        originalRotation = ballTransform.rotation;
+        if (Ball == null)
+            Ball = Instantiate(BallPrefab);
         scoreboardBehaviour = scoreboard.GetComponent<ScoreboardBehaviour>();
     }
     
@@ -28,18 +26,16 @@ public class PaddleBehaviour : MonoBehaviour, IInputHandler
 
     private void SetGameActive(bool active)
     {
-        Rigidbody ballRigidBody = Ball.GetComponent<Rigidbody>();
         gameActive = active;
-        ballRigidBody.useGravity = active;
         if (!active)
         {
-            ballRigidBody.isKinematic = true;
-            Ball.GetComponent<Transform>().SetPositionAndRotation(originalPosition, originalRotation);
-            ballRigidBody.isKinematic = false;
+            Ball = Instantiate(BallPrefab);        
         }
         else
         {
             scoreboardBehaviour.ResetScore();
+            Rigidbody ballRigidBody = Ball.GetComponent<Rigidbody>();
+            ballRigidBody.useGravity = active;
         }
         //Hide or show the cursor.
         if (this.Cursor != null)
