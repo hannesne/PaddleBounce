@@ -1,7 +1,8 @@
-﻿using HoloToolkit.Unity.InputModule;
+﻿using System;
+using HoloToolkit.Unity.InputModule;
 using UnityEngine;
 
-public class PaddleBehaviour : MonoBehaviour, IInputHandler
+public class PaddleBehaviour : MonoBehaviour, IInputHandler, ISourceStateHandler
 {
     public GameObject Cursor;
     public GameObject Ball;
@@ -40,7 +41,7 @@ public class PaddleBehaviour : MonoBehaviour, IInputHandler
         //Hide or show the cursor.
         if (this.Cursor != null)
         {
-            this.Cursor.SetActive(!active);
+            this.Cursor.GetComponent<ICursor>().SetVisiblity(!active);
         }
     }
 
@@ -63,5 +64,16 @@ public class PaddleBehaviour : MonoBehaviour, IInputHandler
                 //We make sure to wake the ball up when it leaves the paddle. 
                 Ball.GetComponent<Rigidbody>().WakeUp();
         }
+    }
+
+    public void OnSourceDetected(SourceStateEventData eventData)
+    {
+        
+    }
+
+    public void OnSourceLost(SourceStateEventData eventData)
+    {
+        if (gameActive)
+            SetGameActive(false);
     }
 }
